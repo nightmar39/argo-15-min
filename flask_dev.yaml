@@ -1,0 +1,25 @@
+kind: Application
+metadata:
+  name: flask-dev-application-devops-toolkit
+  namespace: argocd
+spec: 
+  project: default
+  source: 
+    path: helm
+    repoURL: https://github.com/nightmar39/flask-helm-devops.git
+    targetRevision: HEAD
+    helm: 
+      values: |
+        name: flask-dev
+        deployment: 
+          replicas: 1
+          version: v6
+          port: 5000
+        service: 
+          port: 80
+  destination: 
+    namespace: dev
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true

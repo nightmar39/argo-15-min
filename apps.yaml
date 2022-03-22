@@ -1,0 +1,16 @@
+kind: Application
+metadata:
+  name: flask-application-devops-toolkit
+  namespace: argocd
+spec: 
+  project: default
+  source: 
+    path: helm
+    repoURL: https://github.com/nightmar39/argo-15-min.git
+    targetRevision: HEAD
+  destination: 
+    namespace: dev
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
