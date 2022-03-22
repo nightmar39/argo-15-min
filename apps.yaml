@@ -8,7 +8,7 @@ spec:
   source: 
     repoURL: https://github.com/nightmar39/argo-15-min.git
     targetRevision: HEAD
-    path: ./
+    path: apps 
   destination: 
     namespace: dev
     server: https://kubernetes.default.svc
