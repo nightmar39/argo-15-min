@@ -6,7 +6,7 @@ metadata:
 spec: 
   project: default
   source: 
-    path: templates
+    path: ./ 
     repoURL: https://github.com/nightmar39/flask-helm-devops.git
     targetRevision: HEAD
     helm: 
