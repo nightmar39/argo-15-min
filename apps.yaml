@@ -6,7 +6,6 @@ metadata:
 spec: 
   project: default
   source: 
-    path: helm
     repoURL: https://github.com/nightmar39/argo-15-min.git
     targetRevision: HEAD
   destination: 
